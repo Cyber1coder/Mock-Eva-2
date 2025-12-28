@@ -11,6 +11,7 @@ const Login = () => {
 
       function handleLogin(){
         if(email==="admin@gmail.com" && password === "admin1234"){
+            localStorage.setItem("auth" ,"true")
             alert("Login Success!")
             navigate("/admin")
         }
