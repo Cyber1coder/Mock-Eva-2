@@ -5,12 +5,18 @@ import FleetCard from './FleetCard';
 
 const Admin = () => {
     function Admin(){
-        const[fleet,setFleet]=useState([
-            {id:1,driver:"Ram",available:true},
-            {id:2,driver:"Sham",available:false},
-        ]);
+        const[fleet,setFleet]=useState([]);
 
-        function deleteVehicle(){
+        const addFleet = (data) => {
+            setFleet([...fleet,data]);
+        };
+
+        const updateDriver=useCallback(id) => {
+            const name = prompt("Enter new driver name");
+            if(!name || name() === "")
+                return;
+
+            setFleet((prev)=>)
 
         }
     }
