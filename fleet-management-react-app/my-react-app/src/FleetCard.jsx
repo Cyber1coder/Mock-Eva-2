@@ -1,15 +1,17 @@
 import React from 'react'
 
-function FleetCard({data,onDelete,onToggle}) {
+function FleetCard({data,updateDriver,toggleAvailability,deleteVehicle}) {
 
   return (
     <div>
-      <h3>{data.driver}</h3>
-      <p>{data.available ? "available":"not-available"}</p>
+      <p>Vehicle:{data.vehicle}</p>
+      <p>Driver:{data.driver}</p>
+      <p>Category:{data.category}</p>
+      <p>Status:{data.status}</p>
 
-      <button onClick={()=>onToggle(data.id)}>Toggle</button>
-      <button onClick={()=>onDelete(data.id)}>Delete</button>
-
+      <button onClick={()=>updateDriver(data.id)}>Update Driver</button>
+      <button onClick={()=>toggleAvailability(data.id)}>Change Status</button>
+      <button onClick={()=>deleteVehicle(data.id)}>Delete</button>
     </div>
   )
 }

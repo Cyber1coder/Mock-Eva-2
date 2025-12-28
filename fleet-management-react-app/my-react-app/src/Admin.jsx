@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
+import NavBar from './NavBar';
+import SideBar from './SideBar';
+import FleetCard from './FleetCard';
 
 const Admin = () => {
     function Admin(){
@@ -8,7 +11,7 @@ const Admin = () => {
         ]);
 
         function deleteVehicle(){
-            
+
         }
     }
   return (
